@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Contact Us Page Design using Html CSS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: white;
+            font-family: 'poppins', sans-serif;
+        }
+        
+        body,
+        input,
+        textarea,
+        a {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        #section-wrapper {
+            width: 100%;
+            padding: 10px;
+        }
+        
+        .box-wrapper {
+            position: relative;
+            display: table;
+            width: 1100px;
+            margin: auto;
+            margin-top: 35px;
+            border-radius: 30px;
+        }
+        
+        .info-wrap {
+            width: 35%;
+            height: 551px;
+            padding: 40px;
+            float: left;
+            display: block;
+            border-radius: 30px 0px 0px 30px;
+            background: white;
+            color: black;
+        }
+        
+        .info-title {
+            text-align: left;
+            font-size: 28px;
+            letter-spacing: 0.5px;
+        }
+        
+        .info-sub-title {
+            font-size: 18px;
+            font-weight: 300;
+            margin-top: 17px;
+            letter-spacing: 0.5px;
+            line-height: 26px;
+        }
+        
+        .info-details {
+            list-style: none;
+            margin: 60px 0px;
+        }
+        
+        .info-details li {
+            margin-top: 25px;
+            font-size: 18px;
+            color: white;
+        }
+        
+        .info-details li i {
+            background: #036E89;
+            padding: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        
+        .info-details li a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .info-details li a:hover {
+            color: #036E89;
+        }
+        
+        .social-icons {
+            list-style: none;
+            text-align: center;
+            margin: 20px 0px;
+        }
+        
+        .social-icons li {
+            display: inline-block;
+        }
+        
+        .social-icons li i {
+            background: #036E89;
+            color: #fff;
+            padding: 15px;
+            font-size: 20px;
+            border-radius: 22%;
+            margin: 0px 5px;
+            cursor: pointer;
+            transition: all .5s;
+        }
+        
+        .social-icons li i:hover {
+            background: #fff;
+            color: #036E89;
+        }
+        
+        .form-wrap {
+            width: 65%;
+            float: right;
+            padding: 40px 25px 35px 25px;
+            border-radius: 0px 30px 30px 0px;
+            background: white;
+        }
+        
+        .form-title {
+            text-align: left;
+            margin-left: 23px;
+            font-size: 28px;
+            letter-spacing: 0.5px;
+        }
+        
+        .form-fields {
+            display: table;
+            width: 100%;
+            padding: 15px 5px 5px 5px;
+        }
+        
+        .form-fields input,
+        .form-fields textarea {
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 18px;
+            color: #555;
+            padding: 20px 10px 20px 5px;
+            width: 100%
+        }
+        
+        .form-fields textarea {
+            height: 150px;
+            resize: none;
+        }
+        
+        .form-group {
+            width: 46%;
+            float: left;
+            padding: 0px 30px;
+            margin: 14px 12px;
+            border-radius: 25px;
+            box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+        }
+        
+        .form-fields .form-group:last-child {
+            width: 96%;
+        }
+        
+        .submit-button {
+            width: 96%;
+            height: 60px;
+            margin: 0px 12px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: 700;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            text-align: center;
+            background: #036E89;
+            box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+            transition: .5s;
+        }
+        
+        .submit-button:hover {
+            background: #036E89;
+        }
+        /* Responsive css */
+        
+        @media only screen and (max-width: 767px) {
+            .box-wrapper {
+                width: 100%;
+            }
+            .info-wrap,
+            .form-wrap {
+                width: 100%;
+                height: inherit;
+                float: none;
+            }
+            .info-wrap {
+                border-radius: 30px 30px 0px 0px;
+            }
+            .form-wrap {
+                border-radius: 0px 0px 30px 30px;
+            }
+            .form-group {
+                width: 100%;
+                float: none;
+                margin: 25px 0px;
+            }
+            .form-fields .form-group:last-child,
+            .submit-button {
+                width: 100%;
+            }
+            .submit-button {
+                margin: 10px 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="section-wrapper">
+        <div class="box-wrapper">
+            <div class="info-wrap">
+                <h2 class="info-title">Contact Now</h2>
+                <h3 class="info-sub-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, quisquam.</h3>
+                <ul class="info-details">
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span style="color : black;">Phone :</span> <a href="tel:+1235235598">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span style="color : black;">Email:</span> <a href="mailto:info@yoursite.com">Lorem, ipsum dolor.</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-globe"></i>
+                        <span style="color : black;">Website:</span> <a href="#">adhome.co.id</a>
+                    </li>
+                </ul>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="form-wrap">
+                <!-- Email Form -->
+                <form action="mailto:info@yoursite.com" method="POST" enctype="text/plain">
+                    <h2 class="form-title">Send us a message (Email)</h2>
+                    <div class="form-fields">
+                        <div class="form-group">
+                            <input type="text" name="subject" class="fname" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="name" class="lname" placeholder="Nama Lengkap">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Masukkan Pertanyaan Anda"></textarea>
+                        </div>
+                    </div>
+                    <input type="submit" value="Send Message" class="submit-button">
+                </form>
+
+                <!-- WhatsApp Form -->
+                <form action="https://wa.me/1235235598?text=" method="get" target="_blank">
+                    <h2 class="form-title">Send us a message (WhatsApp)</h2>
+                    <div class="form-fields">
+                        <div class="form-group">
+                            <input type="text" name="subject" class="fname" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="name" class="lname" placeholder="Nama Lengkap">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Masukkan Pertanyaan Anda"></textarea>
+                        </div>
+                    </div>
+                    <input type="submit" value="Send Message to WhatsApp" class="submit-button">
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- footer section starts here  -->
+    <footer>
+        <section class="footer">
+            <div class="container">
+                <div class="detail">
+                    <h3><img src="logor.png" alt=""></h3>
+                    <p>Ruko river town jl. Celebration boulevard Blok BA 2 no.20. Grand wisata kel.lambang sari. Kec. Tambun Selatan kab bekasi 17510. Jawa Barat.</p>
+                    <h5>Social Media </h5>
+                    <a href="#">Official.adhome@gmail.com</a>
+                    <!--  -->
+                    <div class="social">
+                        <a href="https://www.facebook.com/username" target="_blank" class="icon" title="Facebook">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                        <a href="https://www.instagram.com/username" target="_blank" class="icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@username" target="_blank" class="icon" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="about-us">
+                    <h4>Menu</h4>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">official partner<span>Lihat Sekarang!</span></a></li>
+                    <li><a href="#">contact</a></li>
+                </div>
+                <div class="about-us">
+                    <h4>help</h4>
+                    <li><a href="#">contact</a></li>
+                </div>
+                <div class="about-us">
+                    <h4>butuh bantuan ?</h4>
+                    <li><a href="#">contact</a></li>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <div style="color: black; font-weight: 540; text-align: center;">
+                    &copy;2025 - AD.Home all rights reserved
+                </div>
+
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
